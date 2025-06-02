@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+<bean id = "cl" class="spring_XML.College">
+	<property name="clgName" value="CTS"/>
+	<property name="address" value="Chennai"/>	
+		<property name = "departments" ref="dt"/>
+
+	
+</bean>
+
+<bean id = "cl1" class="spring_XML.College">
+	<constructor-arg name="clgName" value="CTSC"/>
+	<constructor-arg name="address" value="Bangl"/>	
+		<constructor-arg name = "departments" ref="dt"/>
+
+	
+</bean>
+
+<bean id = 'dt' class="spring_XML.Departments">
+	<property name = "deptName" value = "ECE"></property>
+	<property name = "deptId" value = "102"></property>
+	
+</bean>
+</beans>
